@@ -1,0 +1,64 @@
+@import "../../../asset/css/shared/variables"
+
+footer
+  padding-top: 2em
+  background-color: #1f1f1f
+  .details
+    max-width: 80em
+    margin: auto
+    display: flex
+    flex-direction: column
+    padding: 1em 2em 3em
+
+    .detail
+      display: flex
+      flex: 1
+      flex-direction: column
+      align-items: center
+      .type
+        display: flex
+        font-size: 1.25em
+        color: white
+        text-align: center
+        padding-bottom: 0.75em
+        span
+          padding: 0.5em
+          border-bottom: 2px solid $indigo
+      .value
+        color: gray
+        padding-bottom: 0.75em
+        font-size: 1.125em
+        text-align: center
+  .social
+    max-width: 80em
+    margin: auto
+    padding-top: 2em
+    border-top: 1px solid #636363
+    .links
+      text-align: center
+      color: #636363
+      i
+        font-size: 1.75em
+        padding-right: 2em
+        &:last-child
+          padding-right: 0
+        &:hover
+          cursor: pointer
+          color: $white
+
+  .copyright
+    background-color: #191919
+    margin-top: 2em
+    padding: 2em 0
+    color: gray
+    text-align: center
+    font-size: 1.025em
+
+
+@media screen and (min-width: 992px)
+  footer
+    .details
+      flex-direction: row
+      .detail
+        .type
+          font-size: 1.5em

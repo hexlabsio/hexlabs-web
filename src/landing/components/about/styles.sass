@@ -1,0 +1,62 @@
+@import "../../../asset/css/shared/variables"
+
+#about
+  background-color: #f7f7f7
+  padding: 3em 2em 2em
+
+  .container
+    display: flex
+    align-items: center
+    flex-direction: column
+    margin: auto
+    max-width: 40em
+
+  .image
+    text-align: center
+    padding-bottom: 1em
+    img
+      width: 100%
+      max-width: 40em
+  .statement
+    font-size: 2em
+    font-weight: bold
+    padding-bottom: 0.75em
+    max-width: 21em
+    margin: auto
+
+  .core
+    color: grey
+    line-height: 2em
+    padding-bottom: 2em
+    font-size: 1.05em
+    max-width: 40em
+    margin: auto
+
+  .action
+    display: inline-flex
+    margin: 0.5em
+    padding: 1em 2em
+    background: linear-gradient(-45deg, #4e54c8, #8089ff)
+    color: $white
+    text-transform: uppercase
+    font-weight: bold
+    border-radius: 1.5em
+    text-decoration: none
+
+    &:hover
+      background: $darkIndigo
+      color: $white
+      cursor: pointer
+
+@media screen and (min-width: 992px)
+  #about
+    padding: 5em 2em 4em
+    .container
+      flex-direction: row
+      max-width: 80em
+
+    .image
+      padding-right: 2em
+    .prose
+      padding-left: 2em
+      padding-right: 1em

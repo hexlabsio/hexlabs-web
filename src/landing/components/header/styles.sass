@@ -1,0 +1,130 @@
+@import "../../../asset/css/shared/variables"
+
+header
+  background: linear-gradient(-45deg, $indigo, $lightIndigo)
+  color: $white
+  padding: 1em
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 999
+  &.sticky
+    position: fixed
+    background: linear-gradient(-45deg, $indigo, $lightIndigo)
+
+  .container
+    display: flex
+    flex-direction: column
+    max-width: 540px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+
+  .title
+    display: flex
+    align-items: center
+    flex: 1
+
+  .brand
+    display: flex
+    align-items: center
+    flex: 1
+    text-decoration: none
+    color: $white
+
+    &:target
+      color: red
+
+    i
+      display: flex
+      padding-right: 0.125em
+      font-size: 3em
+
+    .name
+      font-size: 2em
+      font-weight: bold
+
+  .menu
+    padding: 0.25em 0.5em
+    background: white
+    color: $indigo
+    font-size: 1.5em
+    &:hover
+      cursor: pointer
+
+  .navigation
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    text-transform: uppercase
+    font-weight: 600
+    &.closed
+      display: none
+
+    .links
+      display: flex
+      flex-direction: column
+
+      a
+        text-decoration: none
+        color: white
+        padding-right: 1em
+        padding-top: 0.5em
+        padding-bottom: 0.5em
+        &.active
+          opacity: 0.5
+
+        &:hover
+          opacity: 0.5
+          cursor: pointer
+
+    .action
+      margin: 0.5em
+      padding: 1em 2em
+      background: $white
+      color: $indigo
+      border-radius: 1.5em
+      text-decoration: none
+      &:hover
+        background: $darkIndigo
+        color: $white
+        cursor: pointer
+
+
+@media screen and (min-width: 601px)
+  header
+    background: transparent
+    .container
+      flex-direction: row
+
+    .menu
+      display: none
+
+    .navigation
+      display: flex
+      flex-direction: row
+      &.closed
+        display: flex
+
+      .links
+        flex-direction: row
+
+
+@media screen and (min-width: 768px)
+  header
+    .container
+      max-width: 720px
+      .navigation
+        .links
+          a
+            padding-right: 2em
+
+@media screen and (min-width: 992px)
+  header
+    .container
+      max-width: 1140px
+
+
+

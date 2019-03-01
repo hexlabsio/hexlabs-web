@@ -1,0 +1,41 @@
+{
+  "name": "codeaim-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "connected-react-router": "^6.3.1",
+    "history": "^4.7.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-hash-link": "^1.2.1",
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "stylelint": "^9.10.1",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}

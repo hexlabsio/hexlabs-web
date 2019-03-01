@@ -1,0 +1,77 @@
+@import "../../../asset/css/shared/variables"
+
+#contact
+  padding: 2em
+  .container
+    max-width: 40em
+    margin: auto
+  .prose
+    .statement
+      text-align: center
+      font-size: 2em
+      font-weight: bold
+      padding-bottom: 0.75em
+      max-width: 21em
+      margin: auto
+
+    .core
+      text-align: center
+      line-height: 2em
+      color: gray
+      max-width: 40em
+      margin: auto
+      font-size: 1.05em
+
+  .form
+    padding-top: 2em
+    .detail
+      display: flex
+      flex-direction: column
+      input
+        flex: 1
+        padding: 1.25em 1em
+        margin-bottom: 1em
+        box-shadow: none
+        border: 1px solid #d1d1d1
+        &:focus
+          outline: none
+          border-color: $lightIndigo
+    .message
+      display: flex
+      textarea
+        border: 1px solid #d1d1d1
+        flex: 1
+        padding: 1em
+        margin-bottom: 2em
+        &:focus
+          outline: none
+          border-color: $lightIndigo
+
+    .action
+      padding: 1em 2em
+      background: linear-gradient(-45deg, #4e54c8, #8089ff)
+      color: $white
+      text-align: center
+      text-transform: uppercase
+      font-weight: bold
+      border-radius: 1.5em
+      font-size: 1.05em
+
+      &:hover
+        background: $darkIndigo
+        color: $white
+        cursor: pointer
+
+@media screen and (min-width: 992px)
+  #contact
+    .container
+      max-width: 80em
+    .form
+      .detail
+        flex-direction: row
+        input
+          margin-right: 2em
+          &:last-child
+            margin-right: 0
+      .action
+        display: inline-flex
