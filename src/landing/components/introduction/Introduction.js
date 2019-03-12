@@ -11,7 +11,7 @@ export default props => {
                 <div className="container">
                     <div className="prose">
                         <div className="title">
-                            CodeAim provides digital solutions and consultancy
+                            HexLabs provides digital solutions and consultancy
                         </div>
                         <div className="core">
                             Passionate experienced software engineers and

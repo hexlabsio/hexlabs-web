@@ -15,7 +15,7 @@ export default props => {
                     <div className="type">
                         <span>Email</span>
                     </div>
-                    <div className="value">admin@codeaim.com</div>
+                    <div className="value">admin@hexlabs.io</div>
                 </div>
                 <div className="detail">
                     <div className="type">
@@ -32,7 +32,7 @@ export default props => {
                     <i className="fab fa-linkedin" />
                 </div>
             </div>
-            <div className="copyright">© 2019 CodeAim Limited</div>
+            <div className="copyright">© 2019 HexLabs Limited</div>
         </footer>
     );
 };

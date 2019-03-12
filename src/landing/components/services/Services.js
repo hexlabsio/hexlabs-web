@@ -8,7 +8,7 @@ export default props => {
                 <div className="statement">
                     <div className="title">What we do</div>
                     <div className="description">
-                        CodeAim works across a range of technology and
+                        HexLabs works across a range of technology and
                         industries. Our focus is on empowering and enabling each
                         other and making a difference.
                     </div>
