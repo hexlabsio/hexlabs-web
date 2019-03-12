@@ -1,10 +1,11 @@
 import React from 'react';
 import './styles.sass';
 import aboutImage from './../../../asset/image/about.png';
+import {NavHashLink as NavLink} from "react-router-hash-link";
 
 export default props => {
     return (
-        <div id="about">
+        <div id="about" className="about">
             <div className="container">
                 <div className="image">
                     <img src={aboutImage} alt="About" />
@@ -24,9 +25,12 @@ export default props => {
                         are passionate about and this is what motivates us every
                         day.
                     </div>
-                    <a className="action" href="#contact">
+                    <NavLink className="action"
+                             to="#contact"
+                             smooth
+                    >
                         Contact us
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import './styles.sass';
 
 export default props => {
     return (
-        <div id="services">
+        <div id="services" className="services">
             <div className="container">
                 <div className="statement">
                     <div className="title">What we do</div>

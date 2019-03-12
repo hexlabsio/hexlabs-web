@@ -10,9 +10,9 @@ export default props => {
                 <div className="title">
                     <NavLink className="brand" smooth to="#introduction">
                         <div>
-                            <i className="icon-codeaim-logo" />
+                            <i className="icon-hexlabs-logo" />
                         </div>
-                        <div className="name">CodeAim</div>
+                        <div className="name">HexLabs</div>
                     </NavLink>
                     <div className="menu" onClick={handleToggleNavigation}>
                         <i className="fa fa-bars" />
