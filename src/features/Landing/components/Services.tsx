@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import './Services-styles.sass';
 
 export interface ServicesProps {
 }
 
-const Services: React.FunctionComponent<ServicesProps> = ({}: ServicesProps): JSX.Element =>
+const services: React.FunctionComponent<ServicesProps> = ({}: ServicesProps): JSX.Element => (
     <div id="services" className="services">
         <div className="container">
             <div className="statement">
@@ -48,6 +48,7 @@ const Services: React.FunctionComponent<ServicesProps> = ({}: ServicesProps): JS
                 </div>
             </div>
         </div>
-    </div>;
+    </div>
+);
 
-export default Services;
+export default services;

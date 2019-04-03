@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import './Footer-styles.sass';
 
 export interface FooterProps {
 }
 
-const Footer: React.FunctionComponent<FooterProps> = ({}: FooterProps): JSX.Element =>
+const footer: React.FunctionComponent<FooterProps> = ({}: FooterProps): JSX.Element => (
     <footer>
         <div className="details">
             <div className="detail">
@@ -35,6 +35,7 @@ const Footer: React.FunctionComponent<FooterProps> = ({}: FooterProps): JSX.Elem
             </div>
         </div>
         <div className="copyright">© 2019 HexLabs Limited</div>
-    </footer>;
+    </footer>
+);
 
-export default Footer
+export default footer;

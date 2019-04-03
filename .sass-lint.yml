@@ -1,0 +1,11 @@
+options:
+  merge-default-rules: true
+  max-warnings: 0
+files:
+  include: 'src/**/*.s+(a|c)ss'
+  ignore:
+    - 'src/assets/css/vendor/*.sass'
+rules:
+  nesting-depth:
+    - 2
+    - max-depth: 5

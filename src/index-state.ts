@@ -1,13 +1,13 @@
 import { RouterState } from 'connected-react-router';
-import { IndexState, default as initialLandingState } from './features/Landing/index-state';
+import { default as initialLandingState, IndexState } from './features/Landing/index-state';
 
 export interface RootState {
-    router?: RouterState;
-    landing: IndexState;
+  router?: RouterState;
+  landing: IndexState;
 }
 
 const initialRootState: RootState = {
-    landing: initialLandingState,
+  landing: initialLandingState,
 };
 
 export default initialRootState;

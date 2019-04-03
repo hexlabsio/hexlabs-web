@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './Introduction-styles.sass';
-import {NavHashLink as NavLink} from 'react-router-hash-link'
 
 const introductionImage = require('./../../../assets/images/introduction.png');
 const waveImage = require('./../../../assets/images/wave.png');
@@ -8,7 +8,7 @@ const waveImage = require('./../../../assets/images/wave.png');
 export interface IntroductionProps {
 }
 
-const Introduction: React.FunctionComponent<IntroductionProps> = ({}: IntroductionProps): JSX.Element =>
+const introduction: React.FunctionComponent<IntroductionProps> = ({}: IntroductionProps): JSX.Element => (
     <div id="introduction" className="introduction">
         <div className="banner">
             <div className="container">
@@ -21,9 +21,10 @@ const Introduction: React.FunctionComponent<IntroductionProps> = ({}: Introducti
                         designers offering high quality crafted software,
                         supporting innovation & vision fulfilment.
                     </div>
-                    <NavLink className="action"
-                             to="#contact"
-                             smooth
+                    <NavLink
+                        className="action"
+                        to="#contact"
+                        smooth={true}
                     >
                         Contact us
                     </NavLink>
@@ -36,6 +37,7 @@ const Introduction: React.FunctionComponent<IntroductionProps> = ({}: Introducti
         <div className="wave">
             <img src={waveImage} alt="Wave"/>
         </div>
-    </div>;
+    </div>
+);
 
-export default Introduction
+export default introduction;

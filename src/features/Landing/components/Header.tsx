@@ -1,23 +1,23 @@
-import React from 'react';
+import * as React from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './Header-styles.sass';
-import {NavHashLink as NavLink} from 'react-router-hash-link';
 
 export interface HeaderProps {
-    showStickyHeader: boolean;
-    navigationOpen: boolean;
-    toggleNavigation: () => void;
+  showStickyHeader: boolean;
+  navigationOpen: boolean;
+  toggleNavigation: () => void;
 }
 
-const Header: React.FunctionComponent<HeaderProps> = (
+const header: React.FunctionComponent<HeaderProps> = (
     {
         showStickyHeader,
         toggleNavigation,
-        navigationOpen
-    }: HeaderProps): JSX.Element =>
+        navigationOpen,
+    }: HeaderProps): JSX.Element => (
     <header className={showStickyHeader ? 'sticky' : ''}>
         <div className="container">
             <div className="title">
-                <NavLink className="brand" smooth to="#introduction">
+                <NavLink className="brand" smooth={true} to="#introduction">
                     <div>
                         <i className="icon-hexlabs-logo"/>
                     </div>
@@ -28,40 +28,37 @@ const Header: React.FunctionComponent<HeaderProps> = (
                 </div>
             </div>
             <div
-                className={'navigation' + (navigationOpen ? '' : ' closed')}
+                className={`navigation ${navigationOpen ? '' : ' closed'}`}
             >
                 <div className="links">
                     <NavLink
                         to="#introduction"
-                        smooth
-                        isActive={() =>
-                            window.location.hash === '#introduction'
-                        }
+                        smooth={true}
+                        isActive={() => window.location.hash === '#introduction'}
                     >
                         Home
                     </NavLink>
                     <NavLink
                         to="#services"
-                        smooth
-                        isActive={() =>
-                            window.location.hash === '#services'
-                        }
+                        smooth={true}
+                        isActive={() => window.location.hash === '#services'}
                     >
                         Services
                     </NavLink>
                     <NavLink
                         to="#about"
-                        smooth
+                        smooth={true}
                         isActive={() => window.location.hash === '#about'}
                     >
                         About
                     </NavLink>
                 </div>
-                <NavLink className="action" smooth to="#contact">
+                <NavLink className="action" smooth={true} to="#contact">
                     Contact us
                 </NavLink>
             </div>
         </div>
-    </header>;
+    </header>
+);
 
-export default Header
+export default header;

@@ -1,13 +1,10 @@
-import React from 'react';
+import * as React from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './About-styles.sass';
-import {NavHashLink as NavLink} from "react-router-hash-link";
 
 const aboutImage = require('./../../../assets/images/about.png');
 
-export interface AboutProps {
-}
-
-const About: React.FunctionComponent<AboutProps> = ({}: AboutProps): JSX.Element =>
+const about: React.FunctionComponent<{}> = ({}: {}): JSX.Element => (
     <div id="about" className="about">
         <div className="container">
             <div className="image">
@@ -28,14 +25,16 @@ const About: React.FunctionComponent<AboutProps> = ({}: AboutProps): JSX.Element
                     are passionate about and this is what motivates us every
                     day.
                 </div>
-                <NavLink className="action"
-                         to="#contact"
-                         smooth
+                <NavLink
+                    className="action"
+                    to="#contact"
+                    smooth={true}
                 >
                     Contact us
                 </NavLink>
             </div>
         </div>
-    </div>;
+    </div>
+);
 
-export default About
+export default about;

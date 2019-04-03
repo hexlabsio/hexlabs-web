@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {default as configureStore, history} from "./index-store";
-import {Provider} from 'react-redux';
-import {ConnectedRouter} from "connected-react-router";
-import {Route, Switch} from "react-router";
-import Landing from "./features/Landing";
+import { ConnectedRouter } from 'connected-react-router';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Route, Switch } from 'react-router';
 import './assets/css/index.sass';
-
+import Landing from './features/Landing';
+import { default as configureStore, history } from './index-store';
 
 const store = configureStore({});
 
@@ -14,8 +13,8 @@ ReactDOM.render((
     <Provider store={store}>
         <ConnectedRouter history={history}>
             <Switch>
-                <Route exact path="/" component={Landing}/>
+                <Route exact={true} path="/" component={Landing}/>
             </Switch>
         </ConnectedRouter>
     </Provider>
-), document.getElementById('root'));
+),              document.getElementById('root'));

@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import './Contact-styles.sass';
 
 export interface ContactProps {
 }
 
-const Contact: React.FunctionComponent<ContactProps> = ({}: ContactProps): JSX.Element =>
+const contact: React.FunctionComponent<ContactProps> = ({}: ContactProps): JSX.Element => (
     <div id="contact" className="contact">
         <div className="container">
             <div className="prose">
@@ -17,9 +17,9 @@ const Contact: React.FunctionComponent<ContactProps> = ({}: ContactProps): JSX.E
             </div>
             <div className="form">
                 <div className="detail">
-                    <input placeholder="Your Name:" />
-                    <input placeholder="Telephone:" />
-                    <input placeholder="Email:" />
+                    <input placeholder="Your Name:"/>
+                    <input placeholder="Telephone:"/>
+                    <input placeholder="Email:"/>
                 </div>
                 <div className="message">
                         <textarea
@@ -31,6 +31,7 @@ const Contact: React.FunctionComponent<ContactProps> = ({}: ContactProps): JSX.E
                 <div className="action">Submit message</div>
             </div>
         </div>
-    </div>;
+    </div>
+);
 
-export default Contact
+export default contact;
