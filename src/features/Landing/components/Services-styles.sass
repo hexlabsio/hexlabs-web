@@ -1,0 +1,72 @@
+@import '../../../assets/css/shared/variables'
+
+.services
+  padding: 2em
+
+  .statement
+    padding-bottom: 1em
+
+  .title
+    font-size: 2.5em
+    font-weight: bold
+    padding-bottom: .5em
+    text-align: center
+
+  .description
+    color: $grey
+    font-size: 1.05em
+    line-height: 2em
+    margin: auto
+    max-width: 40em
+    text-align: center
+
+  .areas
+    display: flex
+    flex-direction: column
+    margin: auto
+    max-width: 80em
+
+    .area
+      background-color: $off-white
+      border-radius: .75em
+      margin: 1em
+      padding: 2em
+      text-align: center
+
+      .icon
+        color: $indigo
+        font-size: 3em
+        padding-bottom: .375em
+
+      .heading
+        font-size: 1.5em
+        font-weight: bold
+        padding-bottom: .5em
+
+      .offer
+        color: $grey
+        font-size: 1.05em
+        line-height: 1.75em
+
+@media screen and (min-width: 992px)
+  .services
+
+    .description
+      font-size: 1.125em
+      padding-bottom: 1.5em
+
+    .areas
+      flex-direction: row
+
+      .area
+        padding: 4em 2em
+
+        .icon
+          font-size: 5em
+
+        .heading
+          font-size: 1.625em
+
+        .offer
+          font-size: 1.125em
+

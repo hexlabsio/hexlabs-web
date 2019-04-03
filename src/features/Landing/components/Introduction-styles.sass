@@ -1,0 +1,100 @@
+@import '../../../assets/css/shared/variables'
+
+.introduction
+  background: linear-gradient(-45deg, $transparent-indigo, $transparent-light-indigo), url('../../../assets/images/background.jpg') center
+  background-size: cover
+  padding-top: 8em
+  position: relative
+  top: 0
+
+  .wave
+    display: flex
+    margin-top: 2em
+
+    img
+      height: 1em
+      margin-left: auto
+      margin-right: auto
+      width: 100%
+
+.banner
+  padding: 1em
+
+  .value
+    padding: 1em
+
+  .container
+    align-items: center
+    display: flex
+    flex-direction: column
+    margin-left: auto
+    margin-right: auto
+    max-width: 540px
+    width: 100%
+
+  .prose
+    flex: 1
+    flex-direction: column
+
+  .title
+    color: $white
+    font-size: 2.5em
+    font-weight: bold
+    padding-bottom: 1em
+
+  .core
+    color: $white
+    font-size: 1.125em
+    line-height: 2em
+    padding-bottom: 2em
+    padding-right: 5em
+
+  .action
+    align-self: flex-start
+    background: $white
+    border-radius: 1.5em
+    color: $indigo
+    display: inline-block
+    font-weight: bold
+    margin-bottom: 1em
+    padding: 1em 2em
+    text-decoration: none
+    text-transform: uppercase
+
+    &:hover
+      background: $dark-indigo
+      color: $white
+      cursor: pointer
+
+  .image
+    img
+      margin: auto
+      width: 100%
+
+
+@media screen and (min-width: 768px)
+  .introduction
+    .wave
+      img
+        height: 4em
+
+  .banner
+    .container
+      max-width: 720px
+
+
+
+@media screen and (min-width: 992px)
+  .introduction
+    .wave
+      img
+        height: 5em
+
+  .banner
+    .container
+      flex-direction: row
+      max-width: 1140px
+
+    .core
+      padding-right: 8em
+

@@ -1,0 +1,73 @@
+@import '../../../assets/css/shared/variables'
+
+footer
+  background-color: $very-dark-grey
+  padding-top: 2em
+
+  .details
+    display: flex
+    flex-direction: column
+    margin: auto
+    max-width: 80em
+    padding: 1em 2em 3em
+
+    .detail
+      align-items: center
+      display: flex
+      flex: 1
+      flex-direction: column
+
+    .type
+      color: $white
+      display: flex
+      font-size: 1.25em
+      padding-bottom: .75em
+      text-align: center
+
+      span
+        border-bottom: 2px solid $indigo
+        padding: .5em
+
+    .value
+      color: $grey
+      font-size: 1.125em
+      padding-bottom: .75em
+      text-align: center
+
+  .social
+    border-top: 1px solid $dark-grey
+    margin: auto
+    max-width: 80em
+    padding-top: 2em
+
+    .links
+      color: $dark-grey
+      text-align: center
+
+    i
+      font-size: 1.75em
+      padding-right: 2em
+
+      &:last-child
+        padding-right: 0
+
+      &:hover
+        color: $white
+        cursor: pointer
+
+  .copyright
+    background-color: $black
+    color: $grey
+    font-size: 1.025em
+    margin-top: 2em
+    padding: 2em 0
+    text-align: center
+
+
+@media screen and (min-width: 992px)
+  footer
+    .details
+      flex-direction: row
+
+      .type
+        font-size: 1.5em

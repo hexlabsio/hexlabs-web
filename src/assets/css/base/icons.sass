@@ -1,0 +1,39 @@
+@font-face
+  font-family: 'codeaim-icons'
+  font-style: normal
+  font-weight: normal
+  src: url('./../../assets/fonts/custom/codeaim-icons.eot?#iefix') format('embedded-opentype'), url('./../../assets/fonts/custom/codeaim-icons.woff') format('woff'), url('./../../assets/fonts/custom/codeaim-icons.ttf') format('truetype'), url('./../../assets/fonts/custom/codeaim-icons.svg#codeaim-icons') format('svg')
+
+[data-icon]
+  &::before
+    content: attr(data-icon)
+    font-family: 'codeaim-icons', serif
+    font-style: normal
+    font-variant: normal
+    font-weight: normal
+    line-height: 1
+    speak: none
+    text-transform: none
+
+[class^='icon-'],
+[class*=' icon-']
+  &::before
+    font-family: 'codeaim-icons', serif
+    font-style: normal
+    font-variant: normal
+    font-weight: normal
+    line-height: 1
+    speak: none
+    text-transform: none
+
+.icon-codeaim-logo
+  &::before
+    content: '\61'
+
+.icon-hexlabs-logo
+  &::before
+    content: '\62'
+
+.icon-hexlabs-logo-1
+  &::before
+    content: '\63'
