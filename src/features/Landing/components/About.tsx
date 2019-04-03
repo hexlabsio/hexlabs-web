@@ -4,7 +4,10 @@ import './About-styles.sass';
 
 const aboutImage = require('./../../../assets/images/about.png');
 
-const about: React.FunctionComponent<{}> = ({}: {}): JSX.Element => (
+export interface AboutProps {
+}
+
+const about: React.FunctionComponent<AboutProps> = ({}: AboutProps): JSX.Element => (
     <div id="about" className="about">
         <div className="container">
             <div className="image">
