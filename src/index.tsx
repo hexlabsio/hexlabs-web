@@ -5,9 +5,12 @@ import { Provider } from 'react-redux';
 import { Route, Switch } from 'react-router';
 import './assets/css/index.sass';
 import Landing from './features/Landing';
-import { default as configureStore, history } from './index-store';
+import { default as rootSaga } from './index-sagas';
+import { default as configureStore, history, sagaMiddleware } from './index-store';
 
 const store = configureStore({});
+
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render((
     <Provider store={store}>
