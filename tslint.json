@@ -4,6 +4,7 @@
     "rules": {
         "no-var-requires": false,
         "jsx-no-lambda": false,
+        "align": false,
         "max-line-length": [ true, 180 ]
     }
 }
