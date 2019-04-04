@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import About from './components/About';
-import Contact from './components/Contact';
+import Contact from './../Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Introduction from './components/Introduction';
