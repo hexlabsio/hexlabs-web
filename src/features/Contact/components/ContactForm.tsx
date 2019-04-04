@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Footer-styles.sass';
+import './ContactForm-styles.sass';
 
 export interface ContactFormProps {
 }
