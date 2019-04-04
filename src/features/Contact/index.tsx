@@ -2,6 +2,7 @@ import * as React from 'react';
 import { RootState } from '../../index-state';
 import { connect } from 'react-redux';
 import { IndexState } from './index-state';
+import ContactForm from './components/ContactForm';
 import './index-styles.sass';
 
 interface ActionProps {
@@ -23,21 +24,7 @@ class Index extends React.Component<Props> {
                             form.
                         </div>
                     </div>
-                    <div className="form">
-                        <div className="detail">
-                            <input placeholder="Your Name:"/>
-                            <input placeholder="Telephone:"/>
-                            <input placeholder="Email:"/>
-                        </div>
-                        <div className="message">
-                        <textarea
-                            placeholder="Message:"
-                            name="message"
-                            rows={8}
-                        />
-                        </div>
-                        <div className="action">Submit message</div>
-                    </div>
+                    <ContactForm />
                 </div>
             </div>
     );
