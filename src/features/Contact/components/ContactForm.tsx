@@ -1,6 +1,7 @@
 import { reduxForm, Field, InjectedFormProps } from 'redux-form';
 import * as React from 'react';
 import { default as initialState } from '../index-state';
+import './ContactForm-styles.sass';
 
 export interface ContactFormData {
   name: string;
@@ -26,7 +27,7 @@ const contactForm: React.FunctionComponent<ContactFormProps & InjectedFormProps<
       <Field name="email" component="input" placeholder="Email:" type="text" />
     </div>
     <div className="message">
-      <Field name="message" component="input" placeholder="Message:" type="text" />
+      <Field name="message" component="textarea" rows={8} placeholder="Message:" type="text" />
     </div>
     <button className="action" type="submit" disabled={pristine || submitting}>Submit message</button>
   </form>
