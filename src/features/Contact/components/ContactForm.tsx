@@ -1,6 +1,6 @@
-import { reduxForm, Field, InjectedFormProps } from 'redux-form';
+import {Field, FormErrors, InjectedFormProps, reduxForm} from 'redux-form';
 import * as React from 'react';
-import { default as initialState } from '../index-state';
+import {default as initialState} from '../index-state';
 import './ContactForm-styles.sass';
 
 export interface ContactFormData {
@@ -33,7 +33,18 @@ const contactForm: React.FunctionComponent<ContactFormProps & InjectedFormProps<
   </form>
 );
 
+const validate = (values: ContactFormData): FormErrors<ContactFormData> => {
+  return {
+    ...(!values.name ? {name: "Required"} : {}),
+    ...(!values.telephone ? {telephone: "Required"} : {}),
+    ...(!values.email ? {email: "Required"} : {}),
+    ...(values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email) ? {email: "Invalid email address"} : {}),
+    ...(!values.message ? {message: "Required"} : {})
+  };
+};
+
 export default reduxForm<ContactFormData, ContactFormProps>({
   form: 'contact',
   initialValues: initialState,
+  validate: validate
 })(contactForm);
