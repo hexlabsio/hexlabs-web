@@ -4,7 +4,7 @@ import './Footer-styles.sass';
 export interface FooterProps {
 }
 
-const footer: React.FunctionComponent<FooterProps> = ({}: FooterProps): JSX.Element => (
+const footer = ({}: FooterProps) => (
     <footer>
         <div className="details">
             <div className="detail">

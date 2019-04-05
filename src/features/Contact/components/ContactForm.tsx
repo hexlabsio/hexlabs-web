@@ -19,13 +19,13 @@ type InputProps =  {
   rows: number;
 } & WrappedFieldProps;
 
-const contactForm: React.FunctionComponent<ContactFormProps & InjectedFormProps<ContactFormData, ContactFormProps>> = ({
+const contactForm = ({
    handleSubmit,
    submitContactForm,
    pristine,
    submitting,
    invalid,
-}) => (
+}: ContactFormProps & InjectedFormProps<ContactFormData, ContactFormProps>) => (
   <form className="contact-form" onSubmit={handleSubmit(submitContactForm)}>
     <div className="detail">
       <Field name="name" component={renderInputField} placeholder="Your Name:" type="text" />

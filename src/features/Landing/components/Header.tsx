@@ -9,12 +9,12 @@ export interface HeaderProps {
   toggleNavigation: () => TOGGLE_NAVIGATION;
 }
 
-const header: React.FunctionComponent<HeaderProps> = (
+const header = (
     {
         showStickyHeader,
         toggleNavigation,
         navigationOpen,
-    }: HeaderProps): JSX.Element => (
+    }: HeaderProps) => (
     <header className={showStickyHeader ? 'sticky' : ''}>
         <div className="container">
             <div className="title">

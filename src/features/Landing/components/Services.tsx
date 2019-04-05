@@ -4,7 +4,7 @@ import './Services-styles.sass';
 export interface ServicesProps {
 }
 
-const services: React.FunctionComponent<ServicesProps> = ({}: ServicesProps): JSX.Element => (
+const services = ({}: ServicesProps) => (
     <div id="services" className="services">
         <div className="container">
             <div className="statement">

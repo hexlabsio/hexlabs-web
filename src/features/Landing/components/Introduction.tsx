@@ -8,7 +8,7 @@ const waveImage = require('./../../../assets/images/wave.png');
 export interface IntroductionProps {
 }
 
-const introduction: React.FunctionComponent<IntroductionProps> = ({}: IntroductionProps): JSX.Element => (
+const introduction = ({}: IntroductionProps) => (
     <div id="introduction" className="introduction">
         <div className="banner">
             <div className="container">

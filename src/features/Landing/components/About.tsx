@@ -7,7 +7,7 @@ const aboutImage = require('./../../../assets/images/about.png');
 export interface AboutProps {
 }
 
-const about: React.FunctionComponent<AboutProps> = ({}: AboutProps): JSX.Element => (
+const about = ({}: AboutProps) => (
     <div id="about" className="about">
         <div className="container">
             <div className="image">
