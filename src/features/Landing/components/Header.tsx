@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import './Header-styles.sass';
+import { TOGGLE_NAVIGATION } from '../index-actions';
 
 export interface HeaderProps {
   showStickyHeader: boolean;
   navigationOpen: boolean;
-  toggleNavigation: () => void;
+  toggleNavigation: () => TOGGLE_NAVIGATION;
 }
 
 const header: React.FunctionComponent<HeaderProps> = (

@@ -4,3 +4,12 @@ export interface IndexState {
   telephone: string;
   message: string;
 }
+
+const initialState: IndexState = {
+  name: '',
+  email: '',
+  telephone: '',
+  message: '',
+};
+
+export default initialState;

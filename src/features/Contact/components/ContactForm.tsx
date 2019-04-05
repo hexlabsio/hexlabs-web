@@ -1,25 +1,38 @@
+import { reduxForm, Field, InjectedFormProps } from 'redux-form';
 import * as React from 'react';
-import './ContactForm-styles.sass';
+import { default as initialState } from '../index-state';
 
-export interface ContactFormProps {
+export interface ContactFormData {
+  name: string;
+  telephone: string;
+  email: string;
+  message: string;
 }
 
-const contactForm: React.FunctionComponent<ContactFormProps> = ({}: ContactFormProps): JSX.Element => (
-    <div className="contact-form">
-        <div className="detail">
-            <input placeholder="Your Name:"/>
-            <input placeholder="Telephone:"/>
-            <input placeholder="Email:"/>
-        </div>
-        <div className="message">
-            <textarea
-                placeholder="Message:"
-                name="message"
-                rows={8}
-            />
-        </div>
-        <div className="action">Submit message</div>
+export interface ContactFormProps {
+  submitContactForm: (values: ContactFormData, {}, props: ContactFormProps) => void;
+}
+
+const contactForm: React.FunctionComponent<ContactFormProps & InjectedFormProps<ContactFormData, ContactFormProps>> = ({
+   handleSubmit,
+   submitContactForm,
+   pristine,
+   submitting,
+}) => (
+  <form className="contact-form" onSubmit={handleSubmit(submitContactForm)}>
+    <div className="detail">
+      <Field name="name" component="input" placeholder="Your Name:" type="text" />
+      <Field name="telephone" component="input" placeholder="Telephone:" type="text" />
+      <Field name="email" component="input" placeholder="Email:" type="text" />
     </div>
+    <div className="message">
+      <Field name="message" component="input" placeholder="Message:" type="text" />
+    </div>
+    <button className="action" type="submit" disabled={pristine || submitting}>Submit message</button>
+  </form>
 );
 
-export default contactForm;
+export default reduxForm<ContactFormData, ContactFormProps>({
+  form: 'contact',
+  initialValues: initialState,
+})(contactForm);
