@@ -31,10 +31,6 @@ jobs:
         command: npm run sass-lint
 
     - run:
-        name: Test
-        command: npm test
-
-    - run:
         name: Production Build
         command: npm run build
 
