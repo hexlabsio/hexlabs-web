@@ -4,14 +4,14 @@
   "version": "0.1.0",
   "proxy": "http://localhost:8080",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "REACT_APP_ENV=production react-scripts build",
     "eject": "react-scripts eject",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix",
     "sass-lint": "sass-lint -v",
     "sass-lint:fix": "sass-lint-auto-fix",
-    "start": "react-scripts start",
-    "test": "react-scripts test"
+    "start": "REACT_APP_ENV=development react-scripts start",
+    "test": "REACT_APP_ENV=development react-scripts test"
   },
   "dependencies": {
     "@types/history": "^4.7.2",
@@ -52,11 +52,6 @@
   ],
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint && npm run sass-lint && npm test"
-    }
   },
   "stylelint": {
     "extends": "react-app"
