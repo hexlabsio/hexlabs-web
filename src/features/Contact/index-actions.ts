@@ -8,7 +8,11 @@ export type SUBMIT_CONTACT_FORM_REQUEST = { type: typeof SUBMIT_CONTACT_FORM_REQ
 export type SUBMIT_CONTACT_FORM_SUCCESS = { type: typeof SUBMIT_CONTACT_FORM_SUCCESS };
 export type SUBMIT_CONTACT_FORM_ERROR = { type: typeof SUBMIT_CONTACT_FORM_ERROR };
 
-export const submitContactForm: (contact: ContactFormData, {}, props: ContactFormProps) => SUBMIT_CONTACT_FORM_REQUEST = (contact: ContactFormData, {}, props: ContactFormProps) => {
+export const submitContactForm: (contact: ContactFormData, {}, props: ContactFormProps) => SUBMIT_CONTACT_FORM_REQUEST = (
+    contact: ContactFormData,
+    {},
+    props: ContactFormProps,
+) => {
   return { contact, props, type: SUBMIT_CONTACT_FORM_REQUEST };
 };
 
