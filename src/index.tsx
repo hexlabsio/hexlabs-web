@@ -10,6 +10,8 @@ import { default as configureStore, history, sagaMiddleware } from './index-stor
 
 const store = configureStore({});
 
+export const apiEndpoint = process.env.REACT_APP_ENV === 'production' ? 'https://api.hexlabs.io/web' : '';
+
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render((
