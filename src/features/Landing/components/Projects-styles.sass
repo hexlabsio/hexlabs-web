@@ -1,6 +1,6 @@
 @import '../../../assets/css/shared/variables'
 
-.services
+.projects
   padding: 2em
 
   .statement
@@ -20,19 +20,25 @@
     max-width: 40em
     text-align: center
 
-  .areas
+  .contributions
     display: flex
     flex-direction: column
     margin: auto
     max-width: 80em
 
-    .area
+    .contribution
       background-color: $off-white
       border-radius: .75em
+      color: $black
       flex: 1
       margin: 1em
       padding: 2em
       text-align: center
+      text-decoration: none
+
+      &:hover
+        background-color: $dark-off-white
+        cursor: pointer
 
       .icon
         color: $indigo
@@ -50,16 +56,16 @@
         line-height: 1.75em
 
 @media screen and (min-width: 992px)
-  .services
+  .projects
 
     .description
       font-size: 1.125em
       padding-bottom: 1.5em
 
-    .areas
+    .contributions
       flex-direction: row
 
-      .area
+      .contribution
         padding: 4em 2em
 
         .icon

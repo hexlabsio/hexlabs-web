@@ -53,6 +53,13 @@ const header = (
                     >
                         About
                     </NavLink>
+                    <NavLink
+                        to="#projects"
+                        smooth={true}
+                        isActive={() => window.location.hash === '#projects'}
+                    >
+                        Projects
+                    </NavLink>
                 </div>
                 <NavLink className="action" smooth={true} to="#contact">
                     Contact us

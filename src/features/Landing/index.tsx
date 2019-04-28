@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Introduction from './components/Introduction';
 import Services from './components/Services';
+import Projects from './components/Projects';
 
 import { RootState } from '../../index-state';
 import { IndexState } from './index-state';
@@ -44,6 +45,7 @@ class Index extends React.Component<Props> {
                 <Introduction/>
                 <Services/>
                 <About/>
+                <Projects/>
                 <Contact/>
                 <Footer/>
             </main>
