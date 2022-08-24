@@ -14,31 +14,33 @@ const projects = ({}: ProjectsProps) => (
                 </div>
             </div>
             <div className="contributions">
-                <a className="contribution" href="https://kloudformation.hexlabs.io">
-                    <div className="icon">
-                        <i className="fa fa-code" />
-                    </div>
-                    <div className="heading">KloudFormation</div>
-                    <div className="offer">
-                        Write type safe AWS CloudFormation templates in Kotlin.
-                    </div>
-                </a>
-                <a className="contribution" href="https://github.com/hexlabsio/kotlin-playground">
-                    <div className="icon">
-                        <i className="fa fa-play" />
-                    </div>
-                    <div className="heading">Kotlin Playground</div>
-                    <div className="offer">
-                        Embed runnable Kotlin with custom dependencies in the browser.
-                    </div>
-                </a>
                 <a className="contribution" href="https://github.com/hexlabsio">
                     <div className="icon">
                         <i className="fa fa-inventory" />
                     </div>
-                    <div className="heading">Cloud Inventory </div>
+                    <div className="heading">klouds.io</div>
                     <div className="offer">
                         Visibility & insight into your cloud resources & their relationships.
+                    </div>
+                </a>
+                <a className="contribution" href="https://github.com/hexlabsio/dynamo-ts">
+                    <div className="icon">
+                        <i className="fa fa-database" />
+                    </div>
+                    <div className="heading">Dynamo TS</div>
+                    <div className="offer">
+                        Makes interacting with DynamoDb simpler with a typed interface.
+                    </div>
+                </a>
+                <a className="contribution" href="https://github.com/hexlabsio/kloudformation-ts">
+                    <div className="icon">
+                        <i className="fa fa-code" />
+                    </div>
+                    <div className="heading">
+                        KloudFormation TS
+                    </div>
+                    <div className="offer">
+                      Library allowing users to write type safe stacks in TypeScript.
                     </div>
                 </a>
             </div>
